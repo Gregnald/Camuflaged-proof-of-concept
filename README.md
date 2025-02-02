@@ -12,8 +12,8 @@ This project is made **for educational and research purposes only**. By using or
 ---
 
 ## **📌 How to Use (Self-Host & Automate Attendance)**  
-### **1️⃣ Fork the Repository**  
-- Click on **Fork** to copy this repo to your GitHub.  
+### **1️⃣ Clone the Repository**  
+- Clone this repo to your GitHub.  
 - **Keep the repo private** to protect stored user data.  
 
 ### **2️⃣ Change Admin Credentials**  
