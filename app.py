@@ -89,7 +89,7 @@ try:
             email = request.form['username']
             password = request.form['password']
 
-            if email=='admin' and password=='admin123*':
+            if email=='admin' and password=='admin123':
                 session['user']="admin"
                 return redirect('admin')
 
@@ -159,11 +159,11 @@ try:
         sid=get_sid(session['user'],get_pass(session['user']))
         testing=mark_attendance(sid,qr_id,get_stu(session['user']))
         print(testing)
-        if(testing):
-            l=start_mark(qr_id)
-            session['qr']=qr_id
-            session['responsi']=l
-            flash("Attendance marked!!")
+        # if(testing):
+        l=start_mark(qr_id)
+        session['qr']=qr_id
+        session['responsi']=l
+        flash("Attendance marked!!")
         # else:
         #     session['qr']=qr_id
         #     session['responsi']=testing
