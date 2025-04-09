@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}QR Code Scan{% endblock %}
+
+{% block content %}
+{% if not session['user'] %}
+<script>
+    window.location.href = "{{ url_for('home') }}";
+</script>
+{% endif %}
+<div class="webcam-container">
+    <button class="backCam" id="backCam">Scan</button>
+</div>
+<video id="webcam" width="300" height="300" autoplay></video>
+<canvas id="canvas" style="display: none;"></canvas>
+<div class="post-scan">
+    <button class="zoomIn" id="zoomIn">+</button>
+    <button class="capture" id="capture">Capture</button>
+    <button class="zoomOut"id="zoomOut">-</button>
+</div>
+{{session['qr']}}
+{{session['responsi']}}
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

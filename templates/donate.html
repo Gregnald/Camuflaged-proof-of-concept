@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Camuflaged{% endblock %}
+
+{% block home %}
+{% if not session['user'] %}
+    <a href="/" class="info {% if request.path == '/' %}active{% endif %}">Home</a>
+{% endif %}
+{% if session['user'] %}
+    <a href="/dashboard" class="info {% if request.path == '/dashboard' %}active{% endif %}">Dashboard</a>
+{% endif %}
+{% endblock %}
+
+{% block head_home %}
+{% if session['user'] %}
+<a href="/dashboard" class="head-home">
+{% endif %}
+{% if not session['user'] %}
+<a href="/" class="head-home">
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="gpay-qr">
+    <img src="{{ url_for('static', filename='gpay.png') }}" alt="gpay" class="gpay">
+</div>
+<img src="{{ url_for('static', filename='beggar.jpg') }}" alt="Mhu" class="Mhu">
+{% endblock %}
