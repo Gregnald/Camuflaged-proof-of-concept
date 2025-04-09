@@ -89,12 +89,15 @@ try:
         if request.method == 'POST':
             email = request.form['username']
             password = request.form['password']
+            aemail = email
+            try:
+                email_prefix = email.split("@")[0].upper() # Extract the part before @ from the email
+                email_end = email.split("@")[1]
+                email = email_prefix + "@" + email_end
+            except Exception as e:
+                print(e)
 
-            email_prefix = email.split("@")[0].upper() # Extract the part before @ from the email
-            email_end = email.split("@")[1]
-            email = email_prefix + "@" + email_end
-
-            if email=='admin' and password=='admin123':
+            if aemail=='admin' and password=='admin123':
                 session['user']="admin"
                 return redirect('admin')
 
@@ -182,4 +185,4 @@ except Exception as e:
 
 
 if __name__=="__main__":
-    app.run(debug=True, port=6969, host='0.0.0.0')
+    app.run(debug=False, port=6969, host='0.0.0.0')
