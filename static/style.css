@@ -1,0 +1,376 @@
+body {
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;    
+    background-color: #121212;
+    color: #e0e0e0;
+    font-size: small;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e1e;
+    font-size: xx-small;
+    padding: 10px 10px;
+    flex-direction: row;
+    gap: 10px;
+}
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.header-title {
+    font-size: xx-large;
+    color: white;
+    margin: 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: 5px 0;
+}
+
+.entry {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.separator {
+    width: 90%; /* Adjust width as needed */
+    height: 1px;
+    background: linear-gradient(to right, #121212, rgb(255, 255, 255),#121212);
+    color: #1e1e1e;
+    margin: 0px auto; /* Centers the line with spacing */
+}
+
+.info {
+    position: relative;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+    
+}
+
+.info.active {
+    border-bottom: 2px solid white;
+}
+
+:hover.info {
+    border-bottom: 1px solid white;
+}
+:hover.info.active {
+    border-bottom: 2px solid white;
+}
+
+.logo {
+    width: 100px;
+    height: 40px;
+    size:100%
+}
+
+.footer {
+    background-color: #1e1e1e;
+    font-size: xx-small;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+.content {
+    padding: 50px;
+}
+
+.start{
+    position: relative;
+    top: 50%;
+    width: 100%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.get-started{
+    font-size: xx-large;
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    border-color: rgb(255, 255, 255);
+    background-color: #121212;
+    border-style: solid;
+    border-radius: 25px;
+    transition: 0.25s;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+.login{
+    font-size: xx-large;
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    border-color: rgb(255, 255, 255);
+    background-color: #121212;
+    border-style: solid;
+    border-radius: 25px;
+    transition: 0.25s;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+:hover.login{
+    color: #121212;
+    background-color: white;
+    border-color: 0;
+    cursor: pointer;
+}
+
+:hover.get-started{
+    color: #121212;
+    background-color: white;
+    border-color: 0;
+    cursor: pointer;
+}
+
+.noshi{
+    padding-top: 2%;
+    font-size:400%;
+    padding-bottom: 2%;
+}
+
+.connections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github {
+    /* margin-left: -20%; */
+    width: 100px;
+    border: none;
+    border-radius: 100px;
+    padding: 0;
+}
+
+.linkedin {
+    margin-left: -40%;
+    width: 60px;
+    border: none;
+}
+
+.head-home {
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    margin-left: -2%;
+
+}
+
+.Mhu {
+    width: 120px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.gpay-qr {
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gpay {
+    width: 180px;
+}
+
+.insta {
+    margin-left: -20%;
+    padding-left: 15%;
+    width: 70px;
+}
+
+.signout-container {
+    margin-left: auto;
+    position:absolute;
+    padding-right: 2px;
+    margin-left: 90%;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.signout {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.file-manager {
+    padding-top: 10px;
+}
+
+.tagline {
+    font-family: "Tiro Devanagari Hindi", serif;
+    font-weight: 400;
+    font-style: normal;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    margin-top: -2.0%;
+    margin-bottom: -1%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    max-height: fit-content;
+}
+
+.Love {
+    position: relative;
+    padding-bottom: 5%;
+}
+
+.scanner {
+    font-size: xx-large;
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    border-color: rgb(255, 255, 255);
+    background-color: #121212;
+    border-style: solid;
+    border-radius: 25px;
+    transition: 0.25s;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+:hover.scanner {
+    color: #121212;
+    background-color: white;
+    border-color: 0;
+    cursor: pointer;
+}
+
+.backcam {
+    font-size: xx-large;
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    border-color: rgb(255, 255, 255);
+    background-color: #121212;
+    border-style: solid;
+    border-radius: 25px;
+    transition: 0.25s;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+:hover.backcam {
+    color: #121212;
+    background-color: white;
+    border-color: 0;
+    cursor: pointer;
+}
+
+.zoomIn {
+    font-size: large;
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    border-color: rgb(255, 255, 255);
+    background-color: #121212;
+    border-style: solid;
+    border-radius: 25px;
+    transition: 0.25s;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+:hover.zoomIn {
+    color: #121212;
+    background-color: white;
+    border-color: 0;
+    cursor: pointer;
+}
+
+.zoomOut {
+    font-size: large;
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    border-color: rgb(255, 255, 255);
+    background-color: #121212;
+    border-style: solid;
+    border-radius: 25px;
+    transition: 0.25s;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+:hover.zoomOut {
+    color: #121212;
+    background-color: white;
+    border-color: 0;
+    cursor: pointer;
+}
+
+.capture {
+    font-size: large;
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    border-color: rgb(255, 255, 255);
+    background-color: #121212;
+    border-style: solid;
+    border-radius: 25px;
+    transition: 0.25s;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+:hover.capture {
+    color: #121212;
+    background-color: white;
+    border-color: 0;
+    cursor: pointer;
+}
+
+.backCam {
+    font-size: large;
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    border-color: rgb(255, 255, 255);
+    background-color: #121212;
+    border-style: solid;
+    border-radius: 25px;
+    transition: 0.25s;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+:hover.backCam {
+    color: #121212;
+    background-color: white;
+    border-color: 0;
+    cursor: pointer;
+}

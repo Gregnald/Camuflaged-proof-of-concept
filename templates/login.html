@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Camuflaged{% endblock %}
+
+{% block home %}
+{% if session['user'] %}
+<script>
+    window.location.href = "{{ url_for('dashboard') }}";
+</script>
+{% endif %}
+<a href="/" class="info {% if request.path == '/' %}active{% endif %}">Home</a>
+{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="{{ url_for('login') }}" method="POST">
+        <div class="input-group">
+            <input type="text" id="username" name="username" required placeholder="Email">
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" name="password" required placeholder="Password">
+        </div>
+        <button type="submit" class="login-btn" method="POST">Login</button>
+    </form>
+    <p class="register-link">Don't have an account? <a href="{{ url_for('signup') }}">Register here</a></p>
+</div>
+{% endblock %}

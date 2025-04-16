@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Jersey+15&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header">
+            {% block head_home %}<a href="/" class="head-home">{% endblock %}
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+                <h1 class="header-title">
+                    Camuflaged
+                </h1>
+            </a>
+            {% if session['user'] %}
+            <div class="signout-container">
+                <a href="/signout" class="signout">
+                    &RightArrow;
+                </a>
+            </div>
+            {% endif %}
+        </div>
+        <div class="tagline">
+            <h2>" सबका साथ सबका विकास "</h2>
+        </div>
+        <div class="separator"></div> <!-- Fading Line -->
+        <div class="nav-container">
+            <div class="entry">
+                {% block home %}
+                {% endblock %}
+                <a href="/connect" class="info {% if request.path == '/connect' %}active{% endif %}">Connect</a>
+                <a href="/donate" class="info {% if request.path == '/donate' %}active{% endif %}">Donate</a>
+                <a href="/about" class="info {% if request.path == '/about' %}active{% endif %}">About</a>
+            </div>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer class="footer">
+        <p>&copy; 2025 Camuflaged. All rights reserved.</p>
+    </footer>
+</body>
+</html>

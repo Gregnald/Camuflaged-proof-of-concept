@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block head_home %}
+    <a href="/dashboard" class="head-home">
+{% endblock %}
+
+
+{% block home %}
+{% if not session['user'] %}
+<script>
+    window.location.href = "{{ url_for('home') }}";
+</script>
+{% endif %}
+{% if session['user'] %}
+    <a href="/dashboard" class="info {% if request.path == '/dashboard' %}active{% endif %}">Dashboard</a>
+{% endif %}
+{% endblock %}
+
+
+{% block title %}Dashboard - Camuflaged{% endblock %}
+
+{% block content %}
+<div class="user_id">
+    <h2>
+        {{ session['user'] }}
+    </h2>
+</div>
+
+<div class="nav-button">
+    <a href="/scan">
+    <button class="scanner">
+        scanner
+    </button>
+    </a>
+</div>
+
+{% endblock %}
