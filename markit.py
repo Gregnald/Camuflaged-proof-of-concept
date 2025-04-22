@@ -38,6 +38,7 @@ async def mark_attendance(session_id: str, attendance_id: str, student_id: str):
         pass # print(f"[ERROR] While marking for student {student_id}: {e}")
         return False
 
+
 async def start_mark(qr_id: str):
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
@@ -78,5 +79,6 @@ async def run_mark(email, password, qr_id, student_id):
         return False
 
 # if __name__ == "__main__":
+#     asyncio.run(autc())
 #     qr_code = input("Enter QR Code: ")
 #     asyncio.run(start_mark(qr_code))

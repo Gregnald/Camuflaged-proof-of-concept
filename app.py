@@ -5,6 +5,8 @@ from database import *
 from markit import *
 from qr import *
 import asyncio
+from autc import *
+import os
 
 BASE_DIR = os.path.abspath("../../")
 
@@ -15,6 +17,10 @@ flag=True
 app.secret_key = os.urandom(24)
 
 try:
+    @app.route('/start', methods=['POST'])
+    def start():
+        asyncio.run(autc())
+
     @app.route('/')
     def home():
         return render_template("index.html")
