@@ -26,6 +26,8 @@ This project is made **for educational and research purposes only**. By using or
 - Follow Railway's instructions to **connect your service to the web**.  
 
 ### **4️⃣ How It Works (Once Deployed)**  
+✅ Admin must login and click on "Start Loop" for auto attendace marking on qr generation for registered users.
+                                       OR
 ✅ Any registered user can **sign in and mark attendance** for **everyone in the same batch/group**.  
 ✅ New users can **register** and need not to register again lest admin forget to save and update the latest database .  
 ✅ As long as **one user scans attendance, all others in that batch are marked present**.  
